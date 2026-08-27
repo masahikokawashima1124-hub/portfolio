@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>河島正彦 | 映像編集・AI動画・個人開発 ポートフォリオ</title>
+<meta name="description" content="映像編集とAI動画制作、学習アプリ「まなびめぐる」の個人開発。河島正彦のポートフォリオサイト。">
+<meta property="og:title" content="河島正彦 | ポートフォリオ">
+<meta property="og:description" content="映像編集とAI動画制作、学習アプリの個人開発。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+<body>
+
+<div class="blobs" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-head">
+  <a class="brand" href="#top"><span class="brand-mark">M</span><span class="brand-name">Masahiko&nbsp;Kawashima</span></a>
+  <nav class="nav">
+    <a href="#works">Works</a>
+    <a href="#product">Product</a>
+    <a href="#about">About</a>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow reveal">VIDEO EDITOR &amp; SOLO DEVELOPER</p>
+    <h1 class="hero-title reveal">
+      <span class="line">素材はAIで。</span>
+      <span class="line grad">仕上げは人の手で。</span>
+    </h1>
+    <p class="hero-lead reveal">
+      AI で素材をつくり、Premiere Pro で見やすく整える映像編集。<br>
+      あわせて、小学生向けの学習アプリ「まなびめぐる」を個人開発しています。
+    </p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="#works">作品を見る</a>
+      <a class="btn btn-ghost" href="#product">アプリを触ってみる</a>
+    </div>
+    <ul class="hero-tags reveal">
+      <li>カット編集</li><li>テロップ</li><li>SE / BGM</li><li>AI動画生成</li><li>個人開発</li>
+    </ul>
+  </section>
+
+  <section id="works" class="section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title"><span class="num">01</span>Video Works</h2>
+      <p class="sec-sub">クリックするとその場で再生できます。</p>
+    </div>
+
+    <div class="filters reveal" role="tablist" aria-label="作品の絞り込み">
+      <button class="chip is-on" data-filter="all">ALL</button>
+      <button class="chip" data-filter="ai">AI生成</button>
+      <button class="chip" data-filter="edit">編集</button>
+      <button class="chip" data-filter="short">ショート</button>
+      <button class="chip" data-filter="biz">実務</button>
+    </div>
+
+    <div class="grid" id="work-grid"></div>
+
+    <div class="note-card reveal">
+      <h3>受託編集のお仕事</h3>
+      <p>
+        30秒程度のショート動画から、1時間を超える YouTube 動画まで編集しています。
+        カット・テロップ・SE・BGM入れまで一貫して担当。
+      </p>
+      <p class="note-small">※ 受託案件の成果物は、権利の都合でこのサイトには掲載していません。内容はご相談時に個別にお伝えします。</p>
+    </div>
+  </section>
+
+  <section id="product" class="section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title"><span class="num">02</span>Product</h2>
+      <p class="sec-sub">企画から実装・運用まで、ひとりで作っています。</p>
+    </div>
+
+    <article class="product reveal">
+      <div class="product-copy">
+        <p class="product-kicker">個人開発 / 学習アプリ</p>
+        <h3 class="product-name">まなびめぐる</h3>
+        <p class="product-lead">
+          小学1〜6年生向けの学習アプリ。算数・国語・英語の3教科。<br>
+          問題を解くとポイントが貯まり、ガチャで「きせつのせいれい」のカードを集められます。
+        </p>
+        <ul class="product-points">
+          <li><b>課金ではガチャを引けません。</b>ポイントは勉強することでしか貯まらない設計です。</li>
+          <li><b>インストール不要・登録なし</b>で、ブラウザを開けばすぐ試せます。</li>
+          <li>間違えた問題は <b>翌日 → 3日後 → 7日後 → 20日後</b> に出しなおす間隔反復。</li>
+          <li>広告なし。子どもの個人情報は集めません。</li>
+        </ul>
+        <ul class="badges">
+          <li>HTML / CSS / JS</li><li>ビルド工程なし</li><li>Firebase Auth</li><li>Firestore</li><li>Stripe</li><li>GitHub Pages</li>
+        </ul>
+        <div class="product-actions">
+          <a class="btn btn-primary" href="https://manabimeguru.comagoto.com/index.html" target="_blank" rel="noopener">日本語版をひらく</a>
+          <a class="btn btn-ghost" href="https://manabimegurues.comagoto.com/lp.html" target="_blank" rel="noopener">Versión en español</a>
+        </div>
+      </div>
+
+      <div class="product-visual">
+        <div class="device" id="app-frame" data-src="https://manabimeguru.comagoto.com/index.html">
+          <div class="device-bar"><span></span><span></span><span></span></div>
+          <div class="device-screen">
+            <button class="device-load" type="button">
+              <span class="device-load-ico">▶</span>
+              <span>アプリを読み込む</span>
+              <small>実際に動く画面が表示されます</small>
+            </button>
+          </div>
+        </div>
+        <p class="device-cap">↑ 実物のアプリをそのまま埋め込んでいます</p>
+      </div>
+    </article>
+
+    <article class="sub-card reveal">
+      <h3>キャラクター動画</h3>
+      <p>アプリに登場する「きせつのせいれい」たちの動画を、YouTube チャンネルで公開しています。</p>
+      <a class="link-arrow" href="https://www.youtube.com/@manabimeguru" target="_blank" rel="noopener">@manabimeguru を見る</a>
+    </article>
+  </section>
+
+  <section id="about" class="section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title"><span class="num">03</span>About</h2>
+    </div>
+    <div class="about reveal">
+      <div class="about-photo" id="about-photo">
+        <img src="assets/profile.jpg" alt="河島正彦" onerror="this.closest('#about-photo').classList.add('no-img')">
+        <div class="about-initial" aria-hidden="true">MK</div>
+      </div>
+      <div class="about-body">
+        <h3 class="about-name">河島正彦 <span>Masahiko Kawashima</span></h3>
+        <p>
+          映像編集を軸に、AI での素材生成から Premiere Pro での仕上げまでを担当しています。
+          企業研修動画では、音声を再生成して余計な間をカットし、最後まで見られる長さに整える編集を行いました。
+        </p>
+        <p>
+          あわせて、小学生向け学習アプリ「まなびめぐる」を個人開発。
+          企画・実装・キャラクター設定・運用まで、ひとりで手を動かしています。
+        </p>
+        <div class="skills">
+          <div class="skill-col">
+            <h4>映像</h4>
+            <ul><li>Premiere Pro</li><li>カット編集 / テロップ</li><li>SE・BGM</li><li>AI動画生成</li></ul>
+          </div>
+          <div class="skill-col">
+            <h4>開発</h4>
+            <ul><li>HTML / CSS / JavaScript</li><li>Firebase</li><li>Stripe</li><li>GitHub Pages</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="contact-inner reveal">
+      <h2 class="contact-title">お仕事のご相談</h2>
+      <p class="contact-lead">動画編集・AI動画制作のご依頼、まずはお気軽にどうぞ。</p>
+      <a class="btn btn-big" href="mailto:info@m-ka.jp">info@m-ka.jp にメールする</a>
+      <ul class="socials">
+        <li><a href="mailto:info@m-ka.jp">info@m-ka.jp</a></li>
+        <li><a href="https://www.youtube.com/@manabimeguru" target="_blank" rel="noopener">YouTube（まなびめぐる）</a></li>
+        <li><a href="https://manabimeguru.comagoto.com/index.html" target="_blank" rel="noopener">まなびめぐる</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <p>© <span id="year"></span> Masahiko Kawashima</p>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <button class="modal-close" id="modal-close" aria-label="閉じる">✕</button>
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
