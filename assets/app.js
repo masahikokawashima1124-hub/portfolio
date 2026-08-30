@@ -8,6 +8,29 @@
    tags     : 表示タグ。filter は絞り込みキー（ai / edit / short / biz / self）
    ============================================================ */
 const WORKS = [
+  /* --- 自主制作。動画IDが空のものは表示されません --- */
+  {
+    id: 'k-rAQ7-NF3Q',
+    title: '化粧品広告（CM風）',
+    desc: '同じ商材を、CM の文法で構成した版。朝の光と質感で見せる 15 秒。',
+    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'CM風' }]
+  },
+  {
+    id: 'Ze6biXcjWXU',
+    title: '化粧品広告（UGC風）',
+    desc: '同じ商材を、スマホで撮った個人の投稿として構成した版。手ブレとジャンプカットで組む 15 秒。',
+    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }]
+  },
+
+  /* --- ここから受託・実務の作品 --- */
   {
     id: 'b9b4MQl33Rg',
     title: '学校イベント用ムービー',
@@ -36,28 +59,6 @@ const WORKS = [
     desc: '音声を再生成し、余計な間をカット。字幕を付けて最後まで見やすい長さに整えました。',
     filters: ['biz', 'edit'],
     tags: [{ label: '実務', cls: 't-biz' }, { label: '字幕' }, { label: 'Premiere Pro' }]
-  },
-
-  /* --- ここから自主制作。動画IDを入れると自動で表示されます --- */
-  {
-    id: 'k-rAQ7-NF3Q',
-    title: '化粧品広告（CM風）',
-    desc: '同じ商材を、CM の文法で構成した版。朝の光と質感で見せる 15 秒。',
-    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
-    vertical: true,
-    badge: '自主制作',
-    filters: ['ai', 'short', 'self'],
-    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'CM風' }]
-  },
-  {
-    id: 'Ze6biXcjWXU',
-    title: '化粧品広告（UGC風）',
-    desc: '同じ商材を、スマホで撮った個人の投稿として構成した版。手ブレとジャンプカットで組む 15 秒。',
-    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
-    vertical: true,
-    badge: '自主制作',
-    filters: ['ai', 'short', 'self'],
-    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }]
   }
 ];
 
