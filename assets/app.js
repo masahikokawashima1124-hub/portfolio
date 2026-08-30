@@ -1,8 +1,11 @@
 /* ============================================================
    作品データ ここを編集すれば作品が増減します
    id       : YouTube の動画ID（URL の v= のあと / youtu.be/ のあと）
+              空文字のものは未公開扱いで、サイトには表示されません
    vertical : ショート動画（縦型）なら true
-   tags     : 表示タグ。filter は絞り込みキー（ai / edit / short / biz）
+   badge    : カード左上に出す小さなラベル（任意）
+   note     : 説明の下に小さく出る注記（任意）
+   tags     : 表示タグ。filter は絞り込みキー（ai / edit / short / biz / self）
    ============================================================ */
 const WORKS = [
   {
@@ -33,13 +36,37 @@ const WORKS = [
     desc: '音声を再生成し、余計な間をカット。字幕を付けて最後まで見やすい長さに整えました。',
     filters: ['biz', 'edit'],
     tags: [{ label: '実務', cls: 't-biz' }, { label: '字幕' }, { label: 'Premiere Pro' }]
+  },
+
+  /* --- ここから自主制作。動画IDを入れると自動で表示されます --- */
+  {
+    id: '',
+    title: '化粧品広告（CM風）',
+    desc: '同じ商材を、CM の文法で構成した版。朝の光と質感で見せる 15 秒。',
+    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'CM風' }]
+  },
+  {
+    id: '',
+    title: '化粧品広告（UGC風）',
+    desc: '同じ商材を、スマホで撮った個人の投稿として構成した版。手ブレとジャンプカットで組む 15 秒。',
+    note: '実在ブランドを題材にした自主制作です。ご依頼によるものではありません。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }]
   }
 ];
 
 /* ---------- 作品カードを描画 ---------- */
 const grid = document.getElementById('work-grid');
 
-grid.innerHTML = WORKS.map(function (w) {
+grid.innerHTML = WORKS.filter(function (w) {
+  return w.id;              // 動画IDが未入力のものは表示しない
+}).map(function (w) {
   const tags = w.tags.map(function (t) {
     return '<li class="' + (t.cls || '') + '">' + t.label + '</li>';
   }).join('');
@@ -54,10 +81,12 @@ grid.innerHTML = WORKS.map(function (w) {
         '<img loading="lazy" alt="" src="https://i.ytimg.com/vi/' + w.id + '/maxresdefault.jpg"' +
         ' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/' + w.id + '/hqdefault.jpg\'">' +
         '<div class="card-play"><span>&#9654;</span></div>' +
+        (w.badge ? '<span class="card-badge">' + w.badge + '</span>' : '') +
       '</div>' +
       '<div class="card-body">' +
         '<h3 class="card-title">' + w.title + '</h3>' +
         '<p class="card-desc">' + w.desc + '</p>' +
+        (w.note ? '<p class="card-note">' + w.note + '</p>' : '') +
         '<ul class="card-tags">' + tags + '</ul>' +
       '</div>' +
     '</button>';
@@ -66,6 +95,16 @@ grid.innerHTML = WORKS.map(function (w) {
 /* ---------- 絞り込み ---------- */
 const chips = document.querySelectorAll('.chip');
 const cards = grid.querySelectorAll('.card');
+
+/* 該当する作品が1つも無いフィルタは、ボタンごと消す */
+chips.forEach(function (chip) {
+  const f = chip.dataset.filter;
+  if (f === 'all') return;
+  const hit = Array.prototype.some.call(cards, function (card) {
+    return card.dataset.filters.split(' ').indexOf(f) !== -1;
+  });
+  if (!hit) chip.remove();
+});
 
 chips.forEach(function (chip) {
   chip.addEventListener('click', function () {
