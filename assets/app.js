@@ -29,6 +29,16 @@ const WORKS = [
     filters: ['ai', 'short', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }]
   },
+  {
+    id: '0-29ITBR1z8',
+    title: '転職エージェント広告 ショート',
+    desc: '主人公の心情の変化を、動画の明暗でも表現。迷いの暗さから決断の明るさへ、画づくりで感情を語らせる構成。',
+    note: '架空のサービスを題材にした自主制作です。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Seedance' }, { label: 'Suno' }, { label: 'Premiere Pro' }]
+  },
 
   /* --- ここから受託・実務の作品 --- */
   {
