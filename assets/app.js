@@ -39,6 +39,16 @@ const WORKS = [
     filters: ['ai', 'short', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Seedance' }, { label: 'Suno' }, { label: 'Premiere Pro' }]
   },
+  {
+    id: 'xrYHzMQLMjk',
+    title: 'ワンスワイプルージュ UGC風ショート',
+    desc: 'TikTok 向けに、個人の投稿として成立する形で構成。素材はすべて AI 生成で、広告に見せない画づくりを狙った版。',
+    note: '架空の商品を題材にした自主制作です。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }, { label: 'TikTok' }]
+  },
 
   /* --- ここから受託・実務の作品 --- */
   {
