@@ -50,6 +50,16 @@ const WORKS = [
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'UGC風' }]
   },
 
+  {
+    id: 'el-zOJ8xjH0',
+    title: '2ch風ショート「手柄を横取りする課長」',
+    desc: '掲示板のスレッド形式で、職場の理不尽な話を見せるストーリー系ショート。読ませる文字量と、続きを見たくなるテンポの両立を狙った構成。',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['short', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'ショート', cls: 't-short' }, { label: '2ch風' }]
+  },
+
   /* --- ここから受託・実務の作品 --- */
   {
     id: 'b9b4MQl33Rg',
