@@ -184,6 +184,40 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.hidden) closeModal();
 });
 
+/* ---------- モーショングラフィックス ----------
+   画面に入ったら無音で自動再生、外れたら一時停止。
+   「音ありで見る」を押すと、その1本だけ音ありで頭から再生する。 */
+const mgVideos = document.querySelectorAll('.mg-media video');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const mgIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      const v = entry.target;
+      if (entry.isIntersecting) {
+        const p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.5 });
+  mgVideos.forEach(function (v) { mgIO.observe(v); });
+}
+
+document.querySelectorAll('.mg-sound').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    const v = btn.parentElement.querySelector('video');
+    mgVideos.forEach(function (o) { if (o !== v) o.muted = true; });   // 他は消音
+    v.muted = false;
+    v.controls = true;
+    v.currentTime = 0;
+    const p = v.play();
+    if (p && p.catch) p.catch(function () {});
+    btn.hidden = true;
+  });
+});
+
 /* ---------- アプリの実画面を読み込む ---------- */
 const appFrame = document.getElementById('app-frame');
 const loadBtn = appFrame.querySelector('.device-load');

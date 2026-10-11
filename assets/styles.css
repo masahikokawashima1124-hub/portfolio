@@ -168,6 +168,37 @@ ul{margin:0;padding:0;list-style:none}
 .note-card p{font-size:14.5px;color:var(--ink-2);margin-bottom:.6em}
 .note-small{font-size:12.5px;opacity:.85;margin:0}
 
+/* ---------- motion graphics ---------- */
+.mg-lead{font-size:15px;color:var(--ink-2);max-width:46em;margin:-12px 0 30px}
+.mg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.4vw,28px);align-items:stretch}
+.mg-card{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+  max-width:400px;width:100%;justify-self:center;display:flex;flex-direction:column;
+}
+.mg-media{position:relative;aspect-ratio:9/16;background:#0d0b12}
+.mg-media video{width:100%;height:100%;object-fit:cover;display:block}
+.mg-sound{
+  position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
+  font-family:inherit;font-size:13px;font-weight:700;color:#fff;cursor:pointer;
+  padding:9px 18px 9px 38px;border:0;border-radius:999px;
+  background:rgba(16,12,24,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 5 6 9H2v6h4l5 4V5z'/%3E%3Cpath d='M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14'/%3E%3C/svg%3E") no-repeat 14px center/17px;
+  backdrop-filter:blur(8px);transition:background-color .2s,transform .2s;
+}
+.mg-sound:hover{background-color:rgba(255,61,113,.85);transform:translateX(-50%) translateY(-2px)}
+.mg-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mg-kind{font-family:var(--ff-en);font-size:11.5px;font-weight:900;letter-spacing:.08em;color:var(--pink);margin:0}
+.mg-title{font-size:18px;font-weight:900}
+.mg-title span{display:block;font-size:13px;font-weight:700;color:var(--ink-2);margin-top:2px}
+.mg-desc{font-size:13.5px;color:var(--ink-2);margin:0}
+.mg-spec{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.mg-spec li{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:#F4F0FA;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+.mg-swatch i{width:11px;height:11px;border-radius:50%;display:inline-block;box-shadow:0 0 0 1px rgba(22,18,31,.15)}
+.mg-swatch i + i{margin-left:-9px}
+.mg-swatch i:last-of-type{margin-right:2px}
+.mg-credit{font-size:11.5px;color:var(--ink-2);opacity:.8;margin:auto 0 0;padding-top:4px}
+.mg-note{font-size:12.5px;color:var(--ink-2);margin:22px 0 0}
+
 /* ---------- product ---------- */
 .product{
   display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,52px);align-items:center;
