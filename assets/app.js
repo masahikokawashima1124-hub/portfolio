@@ -110,12 +110,8 @@ const WORKS = [
   }
 ];
 
-/* ---------- 作品カードを描画 ---------- */
-const grid = document.getElementById('work-grid');
-
-grid.innerHTML = WORKS.filter(function (w) {
-  return w.id;              // 動画IDが未入力のものは表示しない
-}).map(function (w) {
+/* ---------- 作品カードを描画（縦型と横型でグループを分ける） ---------- */
+function cardHTML(w) {
   const tags = w.tags.map(function (t) {
     return '<li class="' + (t.cls || '') + '">' + t.label + '</li>';
   }).join('');
@@ -139,11 +135,18 @@ grid.innerHTML = WORKS.filter(function (w) {
         '<ul class="card-tags">' + tags + '</ul>' +
       '</div>' +
     '</button>';
-}).join('');
+}
+
+const published = WORKS.filter(function (w) { return w.id; });   // 動画IDが未入力のものは表示しない
+document.getElementById('grid-v').innerHTML =
+  published.filter(function (w) { return w.vertical; }).map(cardHTML).join('');
+document.getElementById('grid-h').innerHTML =
+  published.filter(function (w) { return !w.vertical; }).map(cardHTML).join('');
 
 /* ---------- 絞り込み ---------- */
 const chips = document.querySelectorAll('.chip');
-const cards = grid.querySelectorAll('.card');
+const cards = document.querySelectorAll('.work-group .card');
+const groups = document.querySelectorAll('.work-group');
 
 /* 該当する作品が1つも無いフィルタは、ボタンごと消す */
 chips.forEach(function (chip) {
@@ -164,8 +167,16 @@ chips.forEach(function (chip) {
       const hit = f === 'all' || card.dataset.filters.split(' ').indexOf(f) !== -1;
       card.style.display = hit ? '' : 'none';
     });
+    // 中身が全部隠れたグループは、見出しごと隠す
+    groups.forEach(function (g) {
+      const any = Array.prototype.some.call(g.querySelectorAll('.card'), function (c) { return c.style.display !== 'none'; });
+      g.hidden = !any;
+    });
   });
 });
+
+// 作品が1本も無いグループは最初から隠す
+groups.forEach(function (g) { g.hidden = !g.querySelector('.card'); });
 
 /* ---------- モーダル再生 ---------- */
 const modal = document.getElementById('modal');
