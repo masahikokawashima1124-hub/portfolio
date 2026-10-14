@@ -61,7 +61,7 @@ const WORKS = [
   },
 
   {
-    id: 'el-zOJ8xjH0',
+    id: 'S0JJbnzaXtU',
     title: '2ch風ショート「手柄を横取りする課長」',
     desc: '掲示板のスレッド形式で、職場の理不尽な話を見せるストーリー系ショート。読ませる文字量と、続きを見たくなるテンポの両立を狙った構成。',
     vertical: true,
