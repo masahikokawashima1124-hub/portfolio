@@ -5,10 +5,33 @@
    vertical : ショート動画（縦型）なら true
    badge    : カード左上に出す小さなラベル（任意）
    note     : 説明の下に小さく出る注記（任意）
+   thumb    : 自前のサムネイル画像（任意。無ければ YouTube のサムネイル）
    tags     : 表示タグ。filter は絞り込みキー（ai / edit / short / biz / self）
    ============================================================ */
 const WORKS = [
   /* --- 自主制作。動画IDが空のものは表示されません --- */
+  {
+    id: 'eVqQxz2NKRE',
+    title: 'トレポチ｜AI歌もの広告MV（アニメ調）',
+    desc: '三日坊主の会社員が覚醒するまでを、アニメ主題歌風のロックで描いたジム予約アプリの広告。歌声を解析して1文字ずつ歌う瞬間に合わせ、感情ごとに叩きつけ・揺れ・砕け散るキネティックテロップを設計。企画・作詞・AI映像生成・リップシンク・編集・モーショングラフィックスまで1人で制作。',
+    note: '架空のサービスを題材にした自主制作です。',
+    thumb: 'assets/thumbs/trepochi.jpg',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'キネティックテロップ' }, { label: 'Suno' }]
+  },
+  {
+    id: '5d1GGATDAuk',
+    title: 'イエラク｜AI歌もの広告MV（実写風）',
+    desc: '家事に追われる休日から解放されるまでを、明るいシティポップで描いた家事代行マッチングの広告。丸い書体と、弾む・沈む・飛んでくるテロップで「暮らしの軽さ」を表現し、アプリ画面のUIアニメーションも自作。',
+    note: '架空のサービスを題材にした自主制作です。',
+    thumb: 'assets/thumbs/ieraku.jpg',
+    vertical: true,
+    badge: '自主制作',
+    filters: ['ai', 'short', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'キネティックテロップ' }, { label: 'Suno' }]
+  },
   {
     id: 'qfYBnz_Bzmc',
     title: '美容医師ショート「毛穴の黒ずみ、洗うほど逆効果」',
@@ -150,8 +173,10 @@ function cardHTML(w) {
     ' data-filters="' + w.filters.join(' ') + '"' +
     ' aria-label="' + w.title + ' を再生">' +
       '<div class="card-media">' +
-        '<img loading="lazy" alt="" src="https://i.ytimg.com/vi/' + w.id + '/maxresdefault.jpg"' +
-        ' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/' + w.id + '/hqdefault.jpg\'">' +
+        (w.thumb
+          ? '<img loading="lazy" alt="" src="' + w.thumb + '">'
+          : '<img loading="lazy" alt="" src="https://i.ytimg.com/vi/' + w.id + '/maxresdefault.jpg"' +
+            ' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/' + w.id + '/hqdefault.jpg\'">') +
         '<div class="card-play"><span>&#9654;</span></div>' +
         (w.badge ? '<span class="card-badge">' + w.badge + '</span>' : '') +
       '</div>' +
