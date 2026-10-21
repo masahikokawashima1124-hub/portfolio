@@ -103,16 +103,6 @@ const WORKS = [
     filters: ['ai', 'edit', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'モーショングラフィックス' }, { label: '予告編' }, { label: 'HyperFrames' }]
   },
-  {
-    id: 'cq1PoIJ06UA',
-    title: '「ありがとう」を7つの感情で（58秒）',
-    desc: '同じ一言「ありがとう」を、興奮・コミカル・怒り・悲しみ・懐かしさ・優しさ・愛情で演じ分けた感情演出の作例。章ごとに書体・色・イージング・カットのリズム・効果音を変え、拍に合わせた連打、間で笑わせるスマッシュカット、打ち消し線と無音、沈む文字、線で描く文字などで感情を表現しました。',
-    note: '自主制作です。写真・映像はAIで生成しています。',
-    thumb: 'assets/thumbs/arigatou.jpg',
-    badge: '自主制作',
-    filters: ['ai', 'edit', 'self'],
-    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'モーショングラフィックス' }, { label: '感情演出' }, { label: 'HyperFrames' }]
-  },
 
   /* --- ここから受託・実務の作品 --- */
   {
