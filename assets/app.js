@@ -151,20 +151,6 @@ const WORKS = [
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '会社案内' }, { label: 'モーショングラフィックス' }]
   },
   {
-    id: 'b9b4MQl33Rg',
-    title: '学校イベント用ムービー',
-    desc: '素材をすべて AI で生成し、Premiere Pro で構成・編集。',
-    filters: ['ai', 'edit'],
-    tags: [{ label: 'AI生成', cls: 't-ai' }, { label: 'イベント' }, { label: 'Premiere Pro' }]
-  },
-  {
-    id: '11oE_QAc7NA',
-    title: 'NEWXUS様 AI HACKATHON 応募動画',
-    desc: 'コンテスト応募用に制作。伝えたいことを短い尺に収める構成。',
-    filters: ['ai', 'edit', 'biz'],
-    tags: [{ label: '実務', cls: 't-biz' }, { label: 'AI生成', cls: 't-ai' }, { label: 'コンテスト' }, { label: 'Premiere Pro' }]
-  },
-  {
     id: 'Hqe473NYiIE',
     title: '物知り博士 Instagram 用ショート',
     desc: '素材はフル AI 出力。縦型フォーマットに合わせてテンポよく編集。',
