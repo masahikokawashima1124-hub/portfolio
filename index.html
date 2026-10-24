@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=20261020a">
+<link rel="stylesheet" href="assets/styles.css?v=20261024a">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
 </head>
 <body>
@@ -68,13 +68,13 @@
       <p class="sec-sub">クリックするとその場で再生できます。</p>
     </div>
 
-    <div class="filters reveal" role="tablist" aria-label="作品の絞り込み">
-      <button class="chip is-on" data-filter="all">ALL</button>
-      <button class="chip" data-filter="ai">AI生成</button>
-      <button class="chip" data-filter="edit">編集</button>
-      <button class="chip" data-filter="short">ショート</button>
-      <button class="chip" data-filter="biz">実務</button>
-      <button class="chip" data-filter="self">自主制作</button>
+    <div class="filters reveal" role="group" aria-label="作品の絞り込み">
+      <button class="chip is-on" type="button" aria-pressed="true" data-filter="all">ALL</button>
+      <button class="chip" type="button" aria-pressed="false" data-filter="ai">AI生成</button>
+      <button class="chip" type="button" aria-pressed="false" data-filter="edit">編集</button>
+      <button class="chip" type="button" aria-pressed="false" data-filter="short">ショート</button>
+      <button class="chip" type="button" aria-pressed="false" data-filter="biz">実務</button>
+      <button class="chip" type="button" aria-pressed="false" data-filter="self">自主制作</button>
     </div>
 
     <div class="work-group" data-group="vertical">
@@ -278,11 +278,11 @@
   <p>© <span id="year"></span> Masahiko Kawashima</p>
 </footer>
 
-<div class="modal" id="modal" hidden>
-  <button class="modal-close" id="modal-close" aria-label="閉じる">✕</button>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="動画を再生" hidden>
+  <button class="modal-close" type="button" id="modal-close" aria-label="閉じる">✕</button>
   <div class="modal-box" id="modal-box"></div>
 </div>
 
-<script src="assets/app.js?v=20261021b"></script>
+<script src="assets/app.js?v=20261024a"></script>
 </body>
 </html>

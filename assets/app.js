@@ -209,8 +209,9 @@ chips.forEach(function (chip) {
 
 chips.forEach(function (chip) {
   chip.addEventListener('click', function () {
-    chips.forEach(function (c) { c.classList.remove('is-on'); });
+    chips.forEach(function (c) { c.classList.remove('is-on'); c.setAttribute('aria-pressed', 'false'); });
     chip.classList.add('is-on');
+    chip.setAttribute('aria-pressed', 'true');
     const f = chip.dataset.filter;
     cards.forEach(function (card) {
       const hit = f === 'all' || card.dataset.filters.split(' ').indexOf(f) !== -1;
@@ -232,7 +233,10 @@ const modal = document.getElementById('modal');
 const modalBox = document.getElementById('modal-box');
 const modalClose = document.getElementById('modal-close');
 
+let lastFocus = null;   // 閉じたら、押したカードに戻る
+
 function openModal(id, vertical) {
+  lastFocus = document.activeElement;
   modalBox.classList.toggle('is-vertical', !!vertical);
   modalBox.innerHTML =
     '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0" ' +
@@ -247,6 +251,7 @@ function closeModal() {
   modal.hidden = true;
   modalBox.innerHTML = '';
   document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 
 cards.forEach(function (card) {
@@ -260,6 +265,14 @@ modal.addEventListener('click', function (e) {
 });
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.hidden) closeModal();
+  // 開いている間は、Tab で動画と「閉じる」の間だけを行き来する
+  if (e.key === 'Tab' && !modal.hidden) {
+    const frame = modalBox.querySelector('iframe');
+    const order = [modalClose, frame].filter(Boolean);
+    const i = order.indexOf(document.activeElement);
+    e.preventDefault();
+    order[(i + (e.shiftKey ? order.length - 1 : 1)) % order.length].focus();
+  }
 });
 
 /* ---------- モーショングラフィックス ----------
