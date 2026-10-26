@@ -33,6 +33,17 @@ const WORKS = [
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'キネティックテロップ' }, { label: 'Suno' }]
   },
   {
+    id: 'aq74Z8Vh_m0',
+    title: 'ひととせ｜記念日の花の定期便 ブランドリール（作例）',
+    desc: '記念日の花の定期便を想定した、Instagram リール向けのブランド動画（45秒）。花屋・ギフト系のリール約230本を調べ、伸びている「記念日の積み重ね」の型で構成。月ごとに画面の色がその月の花の色へ移り変わり、最後は12枚の押し花が額に集まって「1年分の、花束。」で完結します。',
+    note: '作例（架空のブランド）です。実在のサービス・ご依頼によるものではありません。画像・映像はAIで生成しています。',
+    thumb: 'assets/thumbs/hitotose.jpg',
+    vertical: true,
+    badge: '作例',
+    filters: ['ai', 'short', 'edit', 'self'],
+    tags: [{ label: '作例（架空のブランド）', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'ブランドリール' }, { label: 'HyperFrames' }]
+  },
+  {
     id: 'qfYBnz_Bzmc',
     title: '美容医師ショート「毛穴の黒ずみ、洗うほど逆効果」',
     desc: '伸びている美容医師系アカウントの編集の型（縦書きの特大テロップ、背景を暗くする強調、情報カード、引きと寄りの切り替え、Bロールの差し込み）を分析して再現したサンプル。人物・ナレーション・Bロール・BGMはすべてAIで生成し、口の動きはリップシンク専用ツールで声と合わせています。',
