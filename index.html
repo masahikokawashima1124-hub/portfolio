@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=20261026a">
+<link rel="stylesheet" href="assets/styles.css?v=20261030a">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
 </head>
 <body>
@@ -176,9 +176,48 @@
     <p class="mg-note reveal">※ ブランドの3作品は架空のブランドです。実在の店舗・サービスとは関係ありません。「ありがとう」の写真・映像はAIで生成したものです。</p>
   </section>
 
+  <section id="aivideo" class="section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title"><span class="num">03</span>AI Video</h2>
+      <p class="sec-sub">AI映像制作とショート編集の作例です。動きを設計してから生成しています。</p>
+    </div>
+    <article class="ai-feature reveal">
+      <div class="mg-card ai-card">
+        <div class="mg-media">
+          <video src="assets/ai/obaa.mp4" poster="assets/ai/obaa.jpg" muted playsinline loop preload="metadata" aria-label="御年78歳、ただの近所のおばあちゃんです 17秒"></video>
+          <button class="mg-sound" type="button">音ありで見る</button>
+        </div>
+      </div>
+      <div class="ai-body">
+        <p class="mg-kind">AI映像制作＋ショート編集（縦型）</p>
+        <h3 class="ai-title">御年78歳、ただの近所のおばあちゃんです<span>17秒・9:16</span></h3>
+        <p class="ai-desc">AIで生成した人物を保ったまま、Blender で作った「動きの見本」（灰色の人形とカメラの動き）を動画生成AIに渡し、走る・跳ぶ・空中で止まる・カメラが周りを回るといった動きを狙いどおりに実写化。バラエティ番組風のテロップと効果音、BGM の拍に合わせた場面転換で17秒にまとめました。</p>
+        <h4 class="ai-sub">見どころ</h4>
+        <ol class="ai-points">
+          <li>落ちる猫へ駆け出し、空中でキャッチ → 片膝で着地してなでる</li>
+          <li>飛んでくる柿をのけぞってよける間に時間が止まり、カメラが1周（バレットタイム風）</li>
+          <li>膝を上げた構えで空中に止まり、カメラが下から回り込む →「御年78歳」</li>
+        </ol>
+        <h4 class="ai-sub">制作の流れ</h4>
+        <ol class="ai-flow">
+          <li><span>人物の静止画<small>AI生成</small></span></li>
+          <li><span>動きとカメラの見本<small>Blender</small></span></li>
+          <li><span>実写化<small>Seedance 2.5</small></span></li>
+          <li><span>色・テロップ・音<small>編集</small></span></li>
+        </ol>
+        <ul class="mg-spec">
+          <li>Blender</li><li>GPT Image 2.5</li><li>Seedance 2.5</li><li>MG Styles</li><li>ffmpeg</li>
+        </ul>
+        <p class="mg-credit">テロップ部品：MG Styles（MIT License） ／ BGM：Suno（自作） ／ 効果音：VSQ・Adobe Firefly</p>
+        <a class="link-arrow" href="https://youtube.com/shorts/h2a_C2V7c2c" target="_blank" rel="noopener">YouTube で見る</a>
+      </div>
+    </article>
+    <p class="mg-note reveal">※ 人物・映像はすべてAIで生成したものです。登場人物・場所は架空で、実在の人物とは関係ありません。</p>
+  </section>
+
   <section id="product" class="section">
     <div class="sec-head reveal">
-      <h2 class="sec-title"><span class="num">03</span>Product</h2>
+      <h2 class="sec-title"><span class="num">04</span>Product</h2>
       <p class="sec-sub">企画から実装・運用まで、ひとりで作っています。</p>
     </div>
 
@@ -229,7 +268,7 @@
 
   <section id="about" class="section">
     <div class="sec-head reveal">
-      <h2 class="sec-title"><span class="num">04</span>About</h2>
+      <h2 class="sec-title"><span class="num">05</span>About</h2>
     </div>
     <div class="about reveal">
       <div class="about-photo" id="about-photo">
@@ -283,6 +322,6 @@
   <div class="modal-box" id="modal-box"></div>
 </div>
 
-<script src="assets/app.js?v=20261026a"></script>
+<script src="assets/app.js?v=20261030a"></script>
 </body>
 </html>
