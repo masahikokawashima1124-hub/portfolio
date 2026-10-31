@@ -114,6 +114,16 @@ const WORKS = [
     filters: ['ai', 'edit', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'モーショングラフィックス' }, { label: '予告編' }, { label: 'HyperFrames' }]
   },
+  {
+    id: 'lZkQYeElh-A',
+    title: 'SANTA RUSH｜寝坊したサンタの0時までの大配達（30秒）',
+    desc: '寝坊したサンタが0時までにプレゼントを配りきれるか、を描いたクリスマスのショートフィルム。カメラの動き（狭いすき間の通り抜け・サンタ目線）は Blender で設計して AI 映像生成に渡し、早回しの時計・配達ルートの地図・拍に合わせたカウントダウン・風に飛ばされるテロップをモーショングラフィックスで重ねました。最後は時計台に引っかかった帽子でオチをつけています。',
+    note: '架空の作品として制作した自主制作です。映像はAIで生成しています。',
+    thumb: 'assets/thumbs/santa-rush.jpg',
+    badge: '自主制作',
+    filters: ['ai', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Blender' }, { label: 'モーショングラフィックス' }, { label: 'Firefly' }]
+  },
 
   /* --- ここから受託・実務の作品 --- */
   {
