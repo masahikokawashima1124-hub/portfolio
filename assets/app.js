@@ -124,6 +124,26 @@ const WORKS = [
     filters: ['ai', 'edit', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Blender' }, { label: 'モーショングラフィックス' }, { label: 'Firefly' }]
   },
+  {
+    id: 'R7kyHrjZHqw',
+    title: '灼ケル｜オリジナル曲の歌詞MV（サイバー・エレクトロ／2分30秒）',
+    desc: '曲から声だけを取り出して歌詞を1音ずつ16分・32分音符に合わせ、テロップを打楽器に連動させた歌詞MV。キックで跳ね、ハイハットで震え、スネアではじけます。見た目はサイバー（HUD・グリッチ）で統一し、サビでは画面いっぱいの漢字がひび割れて切れる演出に。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
+    note: '作曲・歌唱：Suno（AI）／イラスト：AI生成／映像：HTML（HyperFrames / GSAP）で作成。オリジナル曲による自主制作です。',
+    thumb: 'assets/thumbs/shakeru.jpg',
+    badge: '自主制作',
+    filters: ['ai', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '歌詞MV' }, { label: 'キネティックテロップ' }, { label: 'HyperFrames' }]
+  },
+  {
+    id: '5Fl6B-5TgMs',
+    title: '夜ヲ喰ウ｜オリジナル曲の歌詞MV（ストリート・ミクスチャーロック／2分42秒）',
+    desc: '「灼ケル」と同じ作り方（声だけを取り出して歌詞を16分・32分音符に合わせ、テロップをキック・ハイハット・スネアに連動）で、見た目をストリートに振った歌詞MV。判子・スプレー・テープの文字で、もう1本とはまったく違う画面に仕上げています。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
+    note: '作曲・歌唱：Suno（AI）／イラスト：AI生成／映像：HTML（HyperFrames / GSAP）で作成。オリジナル曲による自主制作です。',
+    thumb: 'assets/thumbs/yoru.jpg',
+    badge: '自主制作',
+    filters: ['ai', 'edit', 'self'],
+    tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '歌詞MV' }, { label: 'キネティックテロップ' }, { label: 'HyperFrames' }]
+  },
 
   /* --- ここから受託・実務の作品 --- */
   {
