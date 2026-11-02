@@ -204,14 +204,6 @@ const WORKS = [
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '会社案内' }, { label: 'モーショングラフィックス' }]
   },
   {
-    id: 'Hqe473NYiIE',
-    title: '物知り博士 Instagram 用ショート',
-    desc: '素材はフル AI 出力。縦型フォーマットに合わせてテンポよく編集。',
-    vertical: true,
-    filters: ['ai', 'short', 'edit'],
-    tags: [{ label: 'ショート', cls: 't-short' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Premiere Pro' }]
-  },
-  {
     id: '4f8MFYTlCok',
     title: '企業研修動画（字幕付き）',
     desc: '音声を再生成し、余計な間をカット。字幕を付けて最後まで見やすい長さに整えました。',
