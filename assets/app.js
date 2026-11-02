@@ -44,6 +44,17 @@ const WORKS = [
     tags: [{ label: '作例（架空のブランド）', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'ブランドリール' }, { label: 'HyperFrames' }]
   },
   {
+    id: '1cLVHBJW4PU',
+    title: 'ねこ日記 #07｜日本語バラエティテロップ（作例・10秒）',
+    desc: 'ショート・リール・vlog 向けに、バラエティ番組風のテロップ（花字）を付けた作例。感情ごとにテロップの性格を変えています：うれしい所は1字ずつ弾み、だらける所は字がとけて垂れ、気まずい所は縦書きで固まり、驚く所は集中線と爆発枠で叩きつける。多層の縁取り丸文字・汗・キラキラ・名札・警告帯・スタンプまで、番組テロップの定番を一通り入れ、効果音の打点に文字の入りをそろえました。すべての文字をスマホの画面で隠れない位置に収めています。',
+    note: '架空の作例です（猫の写真はAIで生成）。中国語の花字の型 MG Styles「18 Variety Captions」（MIT License）を日本語のテロップに作り直しています。',
+    thumb: 'assets/thumbs/neko07.jpg',
+    vertical: true,
+    badge: '作例',
+    filters: ['ai', 'short', 'edit', 'self'],
+    tags: [{ label: '作例（架空）', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'ショート', cls: 't-short' }, { label: 'バラエティテロップ' }, { label: 'モーショングラフィックス' }]
+  },
+  {
     id: 'qfYBnz_Bzmc',
     title: '美容医師ショート「毛穴の黒ずみ、洗うほど逆効果」',
     desc: '伸びている美容医師系アカウントの編集の型（縦書きの特大テロップ、背景を暗くする強調、情報カード、引きと寄りの切り替え、Bロールの差し込み）を分析して再現したサンプル。人物・ナレーション・Bロール・BGMはすべてAIで生成し、口の動きはリップシンク専用ツールで声と合わせています。',
@@ -125,21 +136,21 @@ const WORKS = [
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: 'Blender' }, { label: 'モーショングラフィックス' }, { label: 'Firefly' }]
   },
   {
-    id: 'R7kyHrjZHqw',
-    title: '灼ケル｜オリジナル曲の歌詞MV（サイバー・エレクトロ／2分30秒）',
-    desc: '曲から声だけを取り出して歌詞を1音ずつ16分・32分音符に合わせ、テロップを打楽器に連動させた歌詞MV。キックで跳ね、ハイハットで震え、スネアではじけます。見た目はサイバー（HUD・グリッチ）で統一し、サビでは画面いっぱいの漢字がひび割れて切れる演出に。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
+    id: '5Fl6B-5TgMs',
+    title: '夜ヲ喰ウ｜オリジナル曲の歌詞MV（ストリート・ミクスチャーロック／2分42秒）',
+    desc: '曲から声だけを取り出して歌詞を1音ずつ16分・32分音符に合わせ、テロップを打楽器に連動させた歌詞MV。キックで跳ね、ハイハットで震え、スネアではじけます。見た目はストリートで統一し、判子・スプレー・テープの文字で画面を組んでいます。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
     note: '作曲・歌唱：Suno（AI）／イラスト：AI生成／映像：HTML（HyperFrames / GSAP）で作成。オリジナル曲による自主制作です。',
-    thumb: 'assets/thumbs/shakeru.jpg',
+    thumb: 'assets/thumbs/yoru.jpg',
     badge: '自主制作',
     filters: ['ai', 'edit', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '歌詞MV' }, { label: 'キネティックテロップ' }, { label: 'HyperFrames' }]
   },
   {
-    id: '5Fl6B-5TgMs',
-    title: '夜ヲ喰ウ｜オリジナル曲の歌詞MV（ストリート・ミクスチャーロック／2分42秒）',
-    desc: '「灼ケル」と同じ作り方（声だけを取り出して歌詞を16分・32分音符に合わせ、テロップをキック・ハイハット・スネアに連動）で、見た目をストリートに振った歌詞MV。判子・スプレー・テープの文字で、もう1本とはまったく違う画面に仕上げています。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
+    id: 'R7kyHrjZHqw',
+    title: '灼ケル｜オリジナル曲の歌詞MV（サイバー・エレクトロ／2分30秒）',
+    desc: '「夜ヲ喰ウ」と同じ作り方（声だけを取り出して歌詞を16分・32分音符に合わせ、テロップをキック・ハイハット・スネアに連動）で、見た目をサイバー（HUD・グリッチ）に振った歌詞MV。サビでは画面いっぱいの漢字がひび割れて切れる演出に。映像はすべて HTML（HyperFrames / GSAP）で作っています。',
     note: '作曲・歌唱：Suno（AI）／イラスト：AI生成／映像：HTML（HyperFrames / GSAP）で作成。オリジナル曲による自主制作です。',
-    thumb: 'assets/thumbs/yoru.jpg',
+    thumb: 'assets/thumbs/shakeru.jpg',
     badge: '自主制作',
     filters: ['ai', 'edit', 'self'],
     tags: [{ label: '自主制作', cls: 't-self' }, { label: 'AI生成', cls: 't-ai' }, { label: '歌詞MV' }, { label: 'キネティックテロップ' }, { label: 'HyperFrames' }]
